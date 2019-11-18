@@ -8,6 +8,8 @@
 }
 
 .links {
+  color: white;
+  font-size: 1.5em;
   display: flex;
   justify-content: flex-end;
   margin: 0;
@@ -15,5 +17,10 @@
 
 .links > li {
   display: inline;
-  padding: 5px;
+  padding: 0 2em;
+}
+
+a {
+  color: darkred;
+  text-decoration: none;
 }

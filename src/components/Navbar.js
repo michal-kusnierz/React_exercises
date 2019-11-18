@@ -11,7 +11,7 @@ class Navbar extends React.Component {
           <li>
             <NavLink
               activeStyle={{
-                color: "gold",
+                color: "white",
                 textDecoration: "none"
               }}
               to="/" exact
@@ -23,7 +23,7 @@ class Navbar extends React.Component {
 
           <NavLink
               activeStyle={{
-                color: "gold",
+                color: "white",
                 textDecoration: "none"
               }}
               to="/users/1"
@@ -34,7 +34,7 @@ class Navbar extends React.Component {
           <li>
           <NavLink
               activeStyle={{
-                color: "gold",
+                color: "white",
                 textDecoration: "none"
               }}
               to="/asdadasd"
