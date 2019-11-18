@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 class Navbar extends React.Component {
@@ -8,13 +9,14 @@ class Navbar extends React.Component {
         <h2 className={styles.logo}>Logo tutaj (kiedys)</h2>
         <ul className={styles.links}>
           <li>
-            <a href="/">Home</a>
+
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/users/1">First user</a>
+            <Link to="/users/1">First user</Link>
           </li>
           <li>
-            <a href="/asdadasd">404</a>
+            <Link to="/asdadasd">404</Link>
           </li>
         </ul>
       </nav>
