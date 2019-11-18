@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import App from "./App";
 
 const Root = () => {
@@ -8,6 +8,7 @@ const Root = () => {
       <div>
       <Switch>
           <Route exact path="/" component={App} />
+          <Redirect exact from="/abc" to="/" />
           <Route exact path="/abc" component={() => <h1>/abc</h1>} />
           <Route exact path="/abc/" component={() => <h1>/abc/</h1>} />
           <Route exact path="/ABC/" component={() => <h1>/ABC/</h1>} />
@@ -30,6 +31,7 @@ const Root = () => {
               );
             }}
           />
+          <Route component={() => <h1>404 - sadface</h1>} />
         </Switch>
         />
       </div>
