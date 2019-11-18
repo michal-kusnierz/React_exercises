@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from "./Counter";
 
 function BikeName(props){
   return <h1>{props.nameOfBike}</h1>
@@ -25,6 +26,8 @@ const Bike = props => (
   <div>
     <BikeImage url={props.avatarUrl}/>
     {showName && <BikeName nameOfBike={props.name} />}
+    <Counter />
+    
   </div>
 );
 
