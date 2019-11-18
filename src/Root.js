@@ -6,6 +6,7 @@ const Root = () => {
   return (
     <Router>
       <div>
+      <h1>NAVBAR</h1>
       <Switch>
           <Route exact path="/" component={App} />
           <Redirect exact from="/abc" to="/" />
@@ -33,7 +34,7 @@ const Root = () => {
           />
           <Route component={() => <h1>404 - sadface</h1>} />
         </Switch>
-        />
+        <h1>FOOTER</h1>
       </div>
     </Router>
   );
