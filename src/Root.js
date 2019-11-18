@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import App from "./App";
+import Navbar from "./components/Navbar"
 
 const Root = () => {
   return (
     <Router>
-      <div>
-      <h1>NAVBAR</h1>
-      <Switch>
+      <Navbar />
+        <div>
+          <Switch>
           <Route exact path="/" component={App} />
           <Redirect exact from="/abc" to="/" />
           <Route exact path="/abc" component={() => <h1>/abc</h1>} />
