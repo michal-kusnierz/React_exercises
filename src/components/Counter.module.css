@@ -1,0 +1,18 @@
+.container {
+  width: 200px;
+  background: gold;
+  padding: 10px;
+}
+
+.button {
+  color: gold;
+  background: #191902;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.display {
+  color: black;
+  font-size: 2em;
+}

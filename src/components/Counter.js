@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./Counter.module.css";
 
 let value = 0;
 
@@ -17,10 +18,10 @@ const increment = () => {
 class Counter extends Component {
   render() {
     return (
-      <div>
-        <button onClick={decrement}>-1</button>
-        <span>{value}</span>
-        <button onClick={increment}>+1</button>
+      <div className={styles.container}>
+        <button className={styles.button} onClick={decrement}>-1</button>
+        <span className={styles.display}>{value}</span>
+        <button className={styles.button} onClick={increment}>+1</button>
       </div>
     );
   }
