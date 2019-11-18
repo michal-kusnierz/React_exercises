@@ -18,7 +18,7 @@ class Navbar extends React.Component {
             >
               Home
             </NavLink>
-
+          </li>
           <li>
 
           <NavLink
@@ -43,7 +43,7 @@ class Navbar extends React.Component {
             </NavLink>
           </li>
         </ul>
-      </nav>
+      </nav>    
     );
   }
 }
