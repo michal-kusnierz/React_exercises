@@ -1,15 +1,17 @@
 .container {
   width: 200px;
-  background: gold;
-  padding: 10px;
+  background: lightgray;
+  padding: 1em;
+  margin: 1em;
 }
 
 .button {
   color: gold;
   background: #191902;
-  padding: 5px 15px;
+  padding: 1em 1em;
   border-radius: 5px;
   border: 0;
+  margin: 1em;
 }
 
 .display {
