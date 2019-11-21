@@ -1,6 +1,14 @@
 import React from "react";
 import styles from "./TodoApp.module.css";
 
+const Counter = () => {
+  return (
+    <span className={styles.todoCount}>
+      <strong>0</strong> item left
+    </span>
+  );
+};
+
 const TodoApp = () => {
   return (
     <div>
@@ -42,6 +50,7 @@ const TodoApp = () => {
           <span className={styles.todoCount}>
             <strong>0</strong> item left
           </span>
+          <Counter />
           <ul className={styles.filters}>
             <li>
             <a className={styles.selected} href="#/">
