@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from "./Counter";
 import {withRouter} from 'react-router-dom';
+import withHelloWorld from "../hocs/withHelloWorld";
 
 export function Hero(props) {
   return (
@@ -26,4 +27,4 @@ export function Hero(props) {
   );
 }
 
-export default withRouter(Hero);
+export default withHelloWorld(withRouter(Hero));
