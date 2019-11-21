@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import App from "./App";
 import Navbar from "./components/Navbar";
 import UserDetails from "./components/UserDetails";
-import TodoApp from "./components/TodoApp";
+import TodoApp from "./components/TodoApp.js";
 
 const Root = () => {
   return (
