@@ -9,6 +9,10 @@ const Counter = () => {
   );
 };
 
+const Clear = () => {
+  return <button className={styles.clearCompleted}>Clear completed</button>;
+};
+
 const TodoApp = () => {
   return (
     <div>
