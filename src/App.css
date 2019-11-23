@@ -24,3 +24,14 @@
 .App-link {
   color: #09d3ac;
 }
+
+.User{
+  margin: 0 50px;
+}
+.User button{
+  background-color: yellowgreen;
+  padding: 5px 10px;
+  border: 1px solid darkgreen;
+  border-radius: 9px;
+
+}

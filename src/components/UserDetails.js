@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserDetails = props => {
   return (
-    <div>
+    <div className="User">
       <h1>Users {props.match.params.id}</h1>
       <button
         onClick={() => {
