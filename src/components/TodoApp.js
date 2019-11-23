@@ -40,12 +40,13 @@ const Controls = () => {
   );
 };
 
-const TodoItem = () => {
+const TodoItem = props => {
+  const { isDone, label } = props;
   return (
-    <li className={styles.completed}>
+    <li className={isDone ? styles.completed : ""}>
       <div className={styles.view}>
-        <input className={styles.toggle} type="checkbox" checked />
-        <label>Taste JavaScript</label>
+        <input className={styles.toggle} type="checkbox" checked={isDone} />
+        <label>{label}</label>
         <button className={styles.destroy}></button>
       </div>
       <input className={styles.edit} value="Create a TodoMVC template" />
@@ -56,9 +57,9 @@ const TodoItem = () => {
 const TodoList = () => {
   return (
     <ul className={styles.todoList}>
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      <TodoItem isDone={true} label={"Finish components extraction"} />
+      <TodoItem isDone={false} label={"Attach logic"} />
+      <TodoItem isDone={false} label={"Finish Todo App"} />
     </ul>
   );
 };
@@ -97,29 +98,15 @@ const TodoApp = () => {
         </header>
         <section className={styles.main}>
         </section>
-        <footer className={styles.footer}>
-          <span className={styles.todoCount}>
-            <strong>0</strong> item left
-          </span>
-          <Counter />
-          <Filters />
-          <Clear />
-        </footer>
         <ToggleAll />
         <TodoList />
-        < Controls />
+        <Controls />
       </section>
       <footer className={styles.info}>
         <p>Double-click to edit a todo</p>
-        <p>
-          Template by <a href="http://sindresorhus.com">Sindre Sorhus</a>
-        </p>
-        <p>
-          Created by <a href="http://todomvc.com">you</a>
-        </p>
-        <p>
-          Part of <a href="http://todomvc.com">TodoMVC</a>
-        </p>
+        <p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+        <p>Created by <a href="http://todomvc.com">you</a></p>
+        <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
       </footer>
     </div>
   );
