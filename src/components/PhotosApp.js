@@ -4,15 +4,23 @@ import { photos } from "../data";
 
 const Photo = props => {
   const {
+    id,
     imageUrl = "https://images.pexels.com/photos/948331/pexels-photo-948331.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description = "Unknown",
-    createdAt = "Unknown"
+    createdAt = "Unknown",
+    onPhotoDelete
   } = props;
 
   return (
     <Card>
       <Image src={imageUrl} wrapped ui={false} />
-      <Icon name="close" size="medium" />
+      <Icon
+        name="close"
+        size="large"
+        onClick={() => {
+          onPhotoDelete(id);
+        }}
+      />
       <Card.Content>
         <Card.Header>{description}</Card.Header>
         <Card.Meta>
@@ -58,17 +66,15 @@ class PhotosApp extends React.Component {
             <Segment basic>
               <Card.Group>
                 {this.state.photos.map(photo => (
-                  <div
+                  <Photo 
                     key={photo.id}
-                    onClick={() => this.deletePhoto(photo.id)}
-                  >
-                    <Photo
-                      imageUrl={photo.image}
-                      description={photo.desc}
-                      createdAt={photo.date}
-                    />
-                  </div>
-                ))}
+                    id={photo.id}
+                    imageUrl={photo.image}
+                    description={photo.desc}
+                    createdAt={photo.date}
+                    onPhotoDelete={this.deletePhoto}
+                  />
+            ))}
         
       </Card.Group>
             </Segment>
