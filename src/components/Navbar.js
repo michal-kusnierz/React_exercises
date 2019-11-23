@@ -37,7 +37,12 @@ class Navbar extends React.Component {
             </NavLink>
           </li>
           <li>
-          <NavLink
+            <NavLink activeClassName={"active-link"} to="/photos-app">
+              Photos App
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               activeStyle={{
                 color: "white",
                 textDecoration: "none"
