@@ -37,6 +37,11 @@ class Navbar extends React.Component {
             </NavLink>
           </li>
           <li>
+            <NavLink activeClassName={"active-link"} to="/test/">
+              Testing...
+            </NavLink>
+          </li>
+          <li>
             <NavLink activeClassName={"active-link"} to="/photos-app">
               Photos App
             </NavLink>
